@@ -1,5 +1,6 @@
 import { createSignal, type Component } from "solid-js";
 import { Exo1 } from "./components/exo1";
+import { Exo2 } from "./components/exo2";
 
 const App: Component = () => {
   const [count, setCount] = createSignal(0);
@@ -17,6 +18,7 @@ const App: Component = () => {
       </button>
 
       <Exo1 name="Ayena"></Exo1>
+      <Exo2></Exo2>
     </div>
   );
 };
