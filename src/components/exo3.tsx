@@ -1,6 +1,7 @@
 //un formulaire pour éditer un objet utilisateur (nom, email, âge) et affiche les données mises à jour en direct.
 import { Component } from "solid-js";
 import { createStore } from "solid-js/store";
+import { Exo4 } from "./exo4";
 
 export const Exo3: Component = () => {
   const [user, setUser] = createStore({ name: "", age: 0, email: "" });
@@ -40,17 +41,7 @@ export const Exo3: Component = () => {
           class="input input-bordered"
         />
       </form>
-      <div class="py-4">
-        <p>
-          <strong>Name:</strong> {user.name || "Not provided"}
-        </p>
-        <p>
-          <strong>Age:</strong> {user.age || "Not provided"}
-        </p>
-        <p>
-          <strong>Email:</strong> {user.email || "Not provided"}
-        </p>
-      </div>
+      <Exo4 user={user} />
     </div>
   );
 };
